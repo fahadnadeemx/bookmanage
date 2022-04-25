@@ -78,7 +78,17 @@
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -175,7 +185,7 @@
                 <configuration>
                     <excludes>
                         <exclude>**/entities/*.*</exclude>
-                        <exclude>**/AttskApplication.*</exclude>
+                        <exclude>**/BookmanageApplication.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -223,13 +233,13 @@
                 </dependencies>
                 <configuration>
                     <targetClasses>
-                        <param>com.example.attsk.controller.*</param>
+                        <param>com.book.bookmanage.controller.*</param>
                     </targetClasses>
                     <excludedTestClasses>
-                        <param>com.example.attsk.**.*IT</param>
+                        <param>com.book.bookmanage.**.*IT</param>
                     </excludedTestClasses>
                     <targetTests>
-                        <param>com.example.attsk.controller.*</param>
+                        <param>com.book.bookmanage.controller.*</param>
                     </targetTests>
                     <avoidCallsTo>
                         <avoidCallsTo>java.util.logging</avoidCallsTo>
